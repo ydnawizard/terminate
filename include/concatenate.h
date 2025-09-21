@@ -1,0 +1,7 @@
+#ifndef CONCATENATE_H
+#define CONCATENATE_H
+
+
+
+
+#endif //CONCATENATE_H
