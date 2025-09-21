@@ -21,13 +21,13 @@ void main(int arg_c,char * arg_v)
 	fontify(&bp);
 	//printf("%s\n",graffiti_A);
 	strip_newlines(&bp);
-	for(int i = 0; i < strlen(bp.text); i++)
+	concatenate(&bp);
+	for(int i = 0; i < graffiti_height; i++)
 	{
-		printf("%s\n",bp.intermediate[i]);
+		printf("%s",bp.intermediate_rows[i]);
 	}
-	/*for(int i = 0; i < graffiti_char_len * strlen(bp.text); i++)
-	{
-		printf("%s",bp.output[i]);
-	}*/
-	printf("\n%s\n",bp.text);
+	printf("%s\n",bp.output);
+	/*scroll_horizontal(&bp);
+	printf("%s\n",bp.output);
+	*/
 }

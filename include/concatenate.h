@@ -1,6 +1,10 @@
 #ifndef CONCATENATE_H
 #define CONCATENATE_H
 
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
 #include "banner.h"
 #include "font_graffiti.h"
 

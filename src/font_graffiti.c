@@ -1,6 +1,6 @@
 #include "font_graffiti.h"
 
-int graffiti_char_len = 74;
+int graffiti_char_len = 72;
 
 int graffiti_width = 12;
 int graffiti_height = 6;

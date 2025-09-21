@@ -17,6 +17,8 @@ typedef struct banner
 	int speed;
 	//Strings containing fontified letters
 	char ** intermediate;
+	//
+	char ** intermediate_rows;
 	//String containing end product
 	char * output;
 	

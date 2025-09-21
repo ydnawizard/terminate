@@ -1,7 +1,5 @@
 #include "concatenate.h"
 
-#include <stdlib.h>
-#include <string.h>
 
 void strip_newlines(banner * bp)
 {
@@ -20,8 +18,8 @@ void concatenate_row(banner * bp,int row)
 	    output_index;
 	if(row > 0)
 	{ 
-		j_start = (row * (graffiti_width-1)) + 1;
-		output_index = (row * (strlen(bp->text) * (graffiti_width - 1))) + 1;
+		j_start = (row * (graffiti_width));
+		output_index = (row * (strlen(bp->text) * (graffiti_width)));
 	}
 	else
 	{
@@ -40,11 +38,38 @@ void concatenate_row(banner * bp,int row)
 
 void concatenate(banner * bp)
 {
+	int j_start = 0;
+	int row_length = strlen(bp->text) * graffiti_width;
+	int row_index = 0;
 	strip_newlines(bp);
+	bp->intermediate_rows = malloc(graffiti_height * sizeof(unsigned char *));
 	bp->output = malloc(strlen(bp->text) * graffiti_char_len * sizeof(unsigned char));
+	//Copy to single string
 	for(int i = 0; i < graffiti_height; i++)
 	{
 		concatenate_row(bp,i);
 	}
-}
+	//Copy to strings as rows
+	for(int i = 0; i < graffiti_height; i++)
+	{
+		bp->intermediate_rows[i] = malloc(row_length * sizeof(unsigned char));
+		printf("%d\n",j_start);
+		for(int j = j_start; j < j_start + row_length; j++)
+		{
+			if(j == j_start + row_length - 1)
+			{
+				j_start = j + 1;
+				bp->intermediate_rows[i][row_index] = bp->output[j]; 
+				row_index = 0;
+				break;
+			}
+			else
+			{
+				bp->intermediate_rows[i][row_index] = bp->output[j]; 
+				row_index += 1;
+			}
 
+		}
+	}
+		
+}
