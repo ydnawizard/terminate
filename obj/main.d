@@ -37,8 +37,8 @@ obj/main.o: src/main.c /usr/include/stdc-predef.h include/main.h \
  /usr/include/bits/pthread_stack_min.h /usr/include/bits/dirent_ext.h \
  /usr/include/string.h /usr/include/bits/types/locale_t.h \
  /usr/include/bits/types/__locale_t.h /usr/include/strings.h \
- include/read_file.h include/concatenate.h include/animate.h \
- include/banner.h include/fontify.h
+ include/read_file.h include/concatenate.h include/banner.h \
+ include/font_graffiti.h include/animate.h include/fontify.h
 /usr/include/stdc-predef.h:
 include/main.h:
 /usr/include/stdio.h:
@@ -109,6 +109,7 @@ include/read_directory.h:
 /usr/include/strings.h:
 include/read_file.h:
 include/concatenate.h:
-include/animate.h:
 include/banner.h:
+include/font_graffiti.h:
+include/animate.h:
 include/fontify.h:

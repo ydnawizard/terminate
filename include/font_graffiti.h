@@ -11,112 +11,114 @@
  *            \/       \/        \/ 
  */
 
-unsigned char graffiti_A[71] = {0x20,0x20,0x20,0x5F,0x5F,0x5F,0x5F,0x5F,0x20,0x20,0x20,0x0A,0x20,0x20,0x2F,0x20,0x20,0x5F,0x20,0x20,0x5C,0x20,0x20,0x0A,0x20,0x2F,0x20,0x20,0x2F,0x5F,0x5C,0x20,0x20,0x5C,0x20,0x0A,0x2F,0x20,0x20,0x20,0x20,0x7C,0x20,0x20,0x20,0x20,0x5C,0x0A,0x5C,0x5F,0x5F,0x5F,0x5F,0x7C,0x5F,0x5F,0x20,0x20,0x2F,0x0A,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x5C,0x2F,0x20};
+extern int graffiti_char_len;
 
-unsigned char graffiti_B[71] = {0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x20,0x0A,0x5C,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x20,0x20,0x20,0x5C,0x0A,0x20,0x7C,0x20,0x20,0x20,0x20,0x7C,0x20,0x20,0x5F,0x2F,0x0A,0x20,0x7C,0x20,0x20,0x20,0x20,0x7C,0x20,0x20,0x20,0x5C,0x0A,0x20,0x7C,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x20,0x20,0x2F,0x0A,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x5C,0x2F,0x20};
+extern int graffiti_width;
+extern int graffiti_height;
 
-unsigned char graffiti_C[71] = {0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x20,0x20,0x0A,0x5C,0x5F,0x20,0x20,0x20,0x5F,0x5F,0x5F,0x20,0x5C,0x20,0x0A,0x2F,0x20,0x20,0x20,0x20,0x5C,0x20,0x20,0x5C,0x2F,0x20,0x0A,0x5C,0x20,0x20,0x20,0x20,0x20,0x5C,0x5F,0x5F,0x5F,0x5F,0x0A,0x20,0x5C,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x20,0x20,0x2F,0x0A,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x5C,0x2F,0x20};
-
-unsigned char graffiti_D[71] = {0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x20,0x20,0x20,0x0A,0x5C,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x20,0x5C,0x20,0x20,0x0A,0x20,0x7C,0x20,0x20,0x20,0x20,0x7C,0x20,0x20,0x5C,0x20,0x0A,0x20,0x7C,0x20,0x20,0x20,0x20,0x60,0x20,0x20,0x20,0x5C,0x0A,0x2F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x20,0x20,0x2F,0x0A,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x5C,0x2F,0x20};
-unsigned char graffiti_E[71];
-unsigned char graffiti_F[71];
-unsigned char graffiti_G[71];
-unsigned char graffiti_H[71];
-unsigned char graffiti_I[71];
-unsigned char graffiti_J[71];
-unsigned char graffiti_K[71];
-unsigned char graffiti_L[71];
-unsigned char graffiti_M[71];
-unsigned char graffiti_N[71];
-unsigned char graffiti_O[71];
-unsigned char graffiti_P[71];
-unsigned char graffiti_Q[71];
-unsigned char graffiti_R[71];
-unsigned char graffiti_S[71];
-unsigned char graffiti_T[71];
-unsigned char graffiti_U[71];
-unsigned char graffiti_V[71];
-unsigned char graffiti_W[71];
-unsigned char graffiti_X[71];
-unsigned char graffiti_Y[71];
-unsigned char graffiti_Z[71];
+extern unsigned char graffiti_A[72];
+extern unsigned char graffiti_B[72];
+extern unsigned char graffiti_C[72];
+extern unsigned char graffiti_D[72];
+extern unsigned char graffiti_E[72];
+extern unsigned char graffiti_F[72];
+extern unsigned char graffiti_G[72];
+extern unsigned char graffiti_H[72];
+extern unsigned char graffiti_I[72];
+extern unsigned char graffiti_J[72];
+extern unsigned char graffiti_K[72];
+extern unsigned char graffiti_L[72];
+extern unsigned char graffiti_M[72];
+extern unsigned char graffiti_N[72];
+extern unsigned char graffiti_O[72];
+extern unsigned char graffiti_P[72];
+extern unsigned char graffiti_Q[72];
+extern unsigned char graffiti_R[72];
+extern unsigned char graffiti_S[72];
+extern unsigned char graffiti_T[72];
+extern unsigned char graffiti_U[72];
+extern unsigned char graffiti_V[72];
+extern unsigned char graffiti_W[72];
+extern unsigned char graffiti_X[72];
+extern unsigned char graffiti_Y[72];
+extern unsigned char graffiti_Z[72];
 
 //Lowercases
-unsigned char graffiti_a[71];
-unsigned char graffiti_b[71];
-unsigned char graffiti_c[71];
-unsigned char graffiti_d[71];
-unsigned char graffiti_e[71];
-unsigned char graffiti_f[71];
-unsigned char graffiti_g[71];
-unsigned char graffiti_h[71];
-unsigned char graffiti_i[71];
-unsigned char graffiti_j[71];
-unsigned char graffiti_k[71];
-unsigned char graffiti_l[71];
-unsigned char graffiti_m[71];
-unsigned char graffiti_n[71];
-unsigned char graffiti_o[71];
-unsigned char graffiti_p[71];
-unsigned char graffiti_q[71];
-unsigned char graffiti_r[71];
-unsigned char graffiti_s[71];
-unsigned char graffiti_t[71];
-unsigned char graffiti_u[71];
-unsigned char graffiti_v[71];
-unsigned char graffiti_w[71];
-unsigned char graffiti_x[71];
-unsigned char graffiti_y[71];
-unsigned char graffiti_z[71];
+extern unsigned char graffiti_a[72];
+extern unsigned char graffiti_b[72];
+extern unsigned char graffiti_c[72];
+extern unsigned char graffiti_d[72];
+extern unsigned char graffiti_e[72];
+extern unsigned char graffiti_f[72];
+extern unsigned char graffiti_g[72];
+extern unsigned char graffiti_h[72];
+extern unsigned char graffiti_i[72];
+extern unsigned char graffiti_j[72];
+extern unsigned char graffiti_k[72];
+extern unsigned char graffiti_l[72];
+extern unsigned char graffiti_m[72];
+extern unsigned char graffiti_n[72];
+extern unsigned char graffiti_o[72];
+extern unsigned char graffiti_p[72];
+extern unsigned char graffiti_q[72];
+extern unsigned char graffiti_r[72];
+extern unsigned char graffiti_s[72];
+extern unsigned char graffiti_t[72];
+extern unsigned char graffiti_u[72];
+extern unsigned char graffiti_v[72];
+extern unsigned char graffiti_w[72];
+extern unsigned char graffiti_x[72];
+extern unsigned char graffiti_y[72];
+extern unsigned char graffiti_z[72];
 
 //Numbers
-unsigned char graffiti_0[71];
-unsigned char graffiti_1[71];
-unsigned char graffiti_2[71];
-unsigned char graffiti_3[71];
-unsigned char graffiti_4[71];
-unsigned char graffiti_5[71];
-unsigned char graffiti_6[71];
-unsigned char graffiti_7[71];
-unsigned char graffiti_8[71];
-unsigned char graffiti_9[71];
+extern unsigned char graffiti_0[72];
+extern unsigned char graffiti_1[72];
+extern unsigned char graffiti_2[72];
+extern unsigned char graffiti_3[72];
+extern unsigned char graffiti_4[72];
+extern unsigned char graffiti_5[72];
+extern unsigned char graffiti_6[72];
+extern unsigned char graffiti_7[72];
+extern unsigned char graffiti_8[72];
+extern unsigned char graffiti_9[72];
 
 //Symbols
-/*unsigned char graffiti_`[71];
-unsigned char graffiti_~[71];
-unsigned char graffiti_![71];
-unsigned char graffiti_@[71];
-unsigned char graffiti_#[71];
-unsigned char graffiti_$[71];
-unsigned char graffiti_%[71];
-unsigned char graffiti_^[71];
-unsigned char graffiti_&[71];
-unsigned char graffiti_*[71];
-unsigned char graffiti_([71];
-unsigned char graffiti_)[71];
-unsigned char graffiti_-[71];
-unsigned char graffiti__[71];
-unsigned char graffiti_=[71];
-unsigned char graffiti_+[71];
-unsigned char graffiti_|[71];
-unsigned char graffiti_'[71];
-unsigned char graffiti_sqmarkl[71];
-unsigned char graffiti_sqmarkr[71];
-unsigned char graffiti_dqmarkl[71];
-unsigned char graffiti_dqmarkr[71];
-unsigned char graffiti_;[71];
-unsigned char graffiti_:[71];
-unsigned char graffiti_/[71];
-unsigned char graffiti_?[71];
-unsigned char graffiti_.[71];
-unsigned char graffiti_>[71];
-unsigned char graffiti_,[71];
-unsigned char graffiti_<[71];
+/*extern unsigned char graffiti_`[72];
+extern unsigned char graffiti_~[72];
+extern unsigned char graffiti_![72];
+extern unsigned char graffiti_@[72];
+extern unsigned char graffiti_#[72];
+extern unsigned char graffiti_$[72];
+extern unsigned char graffiti_%[72];
+extern unsigned char graffiti_^[72];
+extern unsigned char graffiti_&[72];
+extern unsigned char graffiti_*[72];
+extern unsigned char graffiti_([72];
+extern unsigned char graffiti_)[72];
+extern unsigned char graffiti_-[72];
+extern unsigned char graffiti__[72];
+extern unsigned char graffiti_=[72];
+extern unsigned char graffiti_+[72];
+extern unsigned char graffiti_|[72];
+extern unsigned char graffiti_'[72];
+extern unsigned char graffiti_sqmarkl[72];
+extern unsigned char graffiti_sqmarkr[72];
+extern unsigned char graffiti_dqmarkl[72];
+extern unsigned char graffiti_dqmarkr[72];
+extern unsigned char graffiti_;[72];
+extern unsigned char graffiti_:[72];
+extern unsigned char graffiti_/[72];
+extern unsigned char graffiti_?[72];
+extern unsigned char graffiti_.[72];
+extern unsigned char graffiti_>[72];
+extern unsigned char graffiti_,[72];
+extern unsigned char graffiti_<[72];
 */
 
 //create lookup table
 
-unsigned char * graffiti_lookup[52] = {graffiti_A,graffiti_B,graffiti_C,graffiti_D,graffiti_E,graffiti_F,graffiti_G,graffiti_H,graffiti_I,graffiti_J,graffiti_K,graffiti_L,graffiti_M,graffiti_N,graffiti_O,graffiti_P,graffiti_Q,graffiti_R,graffiti_S,graffiti_T,graffiti_U,graffiti_V,graffiti_W,graffiti_X,graffiti_Y,graffiti_Z,graffiti_a,graffiti_b,graffiti_c,graffiti_d,graffiti_e,graffiti_f,graffiti_g,graffiti_h,graffiti_i,graffiti_j,graffiti_k,graffiti_l,graffiti_m,graffiti_n,graffiti_o,graffiti_p,graffiti_q,graffiti_r,graffiti_s,graffiti_t,graffiti_u,graffiti_v,graffiti_w,graffiti_x,graffiti_y,graffiti_z};
+extern unsigned char * graffiti_lookup[4];
 
 
 #endif //FONT_GRAFFITI_H
