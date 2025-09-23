@@ -9,3 +9,6 @@ This streamlines something that would be rather tedious in C, especially when
 one wants a variety of fonts and animations. Terminate aims to be easy to interface with
 and works by outputting a single string per tick. I would also like to explore a more 
 combinatorial animation system.
+
+I got the idea for this when working with ncurses. I thought it would be cool to have something
+like an animated title banner for an ncurses based temrinal menu screen.
