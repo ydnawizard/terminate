@@ -53,13 +53,11 @@ void concatenate(banner * bp)
 	for(int i = 0; i < graffiti_height; i++)
 	{
 		bp->intermediate_rows[i] = malloc(row_length * sizeof(unsigned char));
-		printf("%d\n",j_start);
-		for(int j = j_start; j < j_start + row_length; j++)
+		for(int j = j_start; j <= j_start + row_length; j++)
 		{
-			if(j == j_start + row_length - 1)
+			if(j == j_start + row_length)
 			{
-				j_start = j + 1;
-				bp->intermediate_rows[i][row_index] = bp->output[j]; 
+				j_start = j;
 				row_index = 0;
 				break;
 			}

@@ -24,10 +24,23 @@ void main(int arg_c,char * arg_v)
 	concatenate(&bp);
 	for(int i = 0; i < graffiti_height; i++)
 	{
-		printf("%s",bp.intermediate_rows[i]);
+		for(int j = 0; j < strlen(bp.text) * graffiti_width; j++)
+		{
+			printf("%c",bp.intermediate_rows[i][j]);
+		}
 	}
-	printf("%s\n",bp.output);
-	/*scroll_horizontal(&bp);
-	printf("%s\n",bp.output);
-	*/
+	int ctrl = 1;
+	while(ctrl)
+	{
+		scroll_horizontal(&bp);
+		for(int i = 0; i < graffiti_height; i++)
+		{
+			for(int j = 0; j < strlen(bp.text) * graffiti_width; j++)
+			{
+				printf("%c",bp.intermediate_rows[i][j]);
+			}
+		}
+		usleep(20000);
+		system("clear");
+	}
 }
