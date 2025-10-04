@@ -19,8 +19,10 @@ void main(int arg_c,char * arg_v)
 	banner bp;
 	bp.text = "ABCABC";
 	bp.font_title = "graffiti";
-	font_lookup(&bp);
-	convert_text_to_font(&bp);
+	font * fslt;
+	init_font_struct_lookup_table(&fslt);
+	font_title_lookup(&bp);
+	convert_text_to_font(&bp,fslt);
 	//printf("%s\n",graffiti_A);
 	strip_newlines(&bp);
 	for(int i = 0; i < strlen(bp.text); i++)

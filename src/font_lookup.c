@@ -4,9 +4,10 @@ char * font_title_lookup_table[1] = {"graffiti"};
 
 int font_count = 1;
 
-void init_font_struct_lookup_table()
+void init_font_struct_lookup_table(font ** fslt)
 {
-	font font_struct_lookup_table[1] = {graffiti};
+	(*fslt) = malloc(font_count * sizeof(font));
+	(*fslt)[0] = graffiti;
 }
 
 
@@ -22,8 +23,3 @@ void font_title_lookup(banner * bp)
 	}
 }
 
-void font_lookup(banner * bp)
-{
-	init_font_struct_lookup_table();
-	font_title_lookup(bp);
-}

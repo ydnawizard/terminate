@@ -27,4 +27,7 @@ typedef struct banner
 	
 }banner;
 
+
+void init_banner(banner * bp);
+
 #endif //BANNER_H

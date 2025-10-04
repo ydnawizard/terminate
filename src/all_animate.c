@@ -1,4 +1,4 @@
-#include "*_animate.h"
+#include "all_animate.h"
 
 void scroll_horizontal(banner * bp)
 {

@@ -5,6 +5,7 @@
 
 
 #include "struct_banner.h"
+#include "struct_font.h"
 #include "font_list.h"
 
 #include <stdlib.h>
@@ -17,6 +18,6 @@ void get_char_indexes(banner * bp);
 
 //Takes in a banner struct pointer, converts string in text field
 //to the font specified in font field, and outputs to output field
-void convert_text_to_font(banner * bp);
+void convert_text_to_font(banner * bp,font * fslt);
 
 #endif //FONTIFY_H

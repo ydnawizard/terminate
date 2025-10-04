@@ -1,5 +1,6 @@
 #include "text_concatenate.h"
 
+/*
 void concatenate_to_output(banner * bp,int row)
 {
 	int j_start,
@@ -24,7 +25,7 @@ void concatenate_to_output(banner * bp,int row)
 	}
 }
 
-void concatenate(banner * bp)
+void text_concatenate(banner * bp)
 {
 	int j_start = 0;
 	int row_length = strlen(bp->text) * graffiti_width;
@@ -39,3 +40,4 @@ void concatenate(banner * bp)
 	}
 }
 
+*/

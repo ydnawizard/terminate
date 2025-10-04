@@ -11,7 +11,7 @@
 #include "font.h"
 #include "font_lookup.h"
 #include "intermediate_strip.h"
-#include "*_animate.h"
+#include "all_animate.h"
 
 
 #endif //MAIN_H
