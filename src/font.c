@@ -19,13 +19,13 @@ void get_char_indexes(banner * bp)
 	}
 }
 
-void convert_text_to_font(banner * bp,font * fslt)
+void convert_text_to_font(banner * bp)
 {
 	get_char_indexes(bp);
 	bp->intermediate = malloc(strlen(bp->text) * sizeof(unsigned char *));
 	for(int i = 0; i < strlen(bp->text); i++)
 	{
-		bp->intermediate[i] = malloc(fslt[bp->font_index].char_len * sizeof(unsigned char));
-		memcpy(bp->intermediate[i],fslt[bp->font_index].lookup[bp->char_indexes[i]],72 * sizeof(unsigned char));
+		bp->intermediate[i] = malloc(bp->selected_font.char_len * sizeof(unsigned char));
+		memcpy(bp->intermediate[i],bp->selected_font.lookup[bp->char_indexes[i]],72 * sizeof(unsigned char));
 	}
 }

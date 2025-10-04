@@ -7,7 +7,8 @@
 
 #include "struct_banner.h"
 #include "struct_font.h"
-#include "text_concatenate.h"
+#include "banner_init.h"
+#include "intermediate_concatenate.h"
 #include "font.h"
 #include "font_lookup.h"
 #include "intermediate_strip.h"

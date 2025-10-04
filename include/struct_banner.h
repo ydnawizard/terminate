@@ -1,5 +1,6 @@
 #ifndef BANNER_H
 #define BANNER_H
+#include "struct_font.h"
 
 //Main struct used passed int and out of program
 typedef struct banner
@@ -12,6 +13,7 @@ typedef struct banner
 	char * font_title;
 	//Font to use (index in font lookup)
 	int font_index;
+	font selected_font;
 	//Animation effect to be applied to text
 	char * effect;
 	//Tick speed of animation
@@ -27,7 +29,5 @@ typedef struct banner
 	
 }banner;
 
-
-void init_banner(banner * bp);
 
 #endif //BANNER_H
