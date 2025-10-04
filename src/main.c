@@ -18,29 +18,17 @@ void main(int arg_c,char * arg_v)
 {
 	banner bp;
 	bp.text = "ABCABC";
-	fontify(&bp);
+	bp.font_title = "graffiti";
+	font_lookup(&bp);
+	convert_text_to_font(&bp);
 	//printf("%s\n",graffiti_A);
 	strip_newlines(&bp);
-	concatenate(&bp);
-	for(int i = 0; i < graffiti_height; i++)
+	for(int i = 0; i < strlen(bp.text); i++)
 	{
-		for(int j = 0; j < strlen(bp.text) * graffiti_width; j++)
+		for(int j = 0; j < graffiti_char_len; j++)
 		{
-			printf("%c",bp.intermediate_rows[i][j]);
+			printf("%c",bp.intermediate[i][j]);
 		}
-	}
-	int ctrl = 1;
-	while(ctrl)
-	{
-		scroll_horizontal(&bp);
-		for(int i = 0; i < graffiti_height; i++)
-		{
-			for(int j = 0; j < strlen(bp.text) * graffiti_width; j++)
-			{
-				printf("%c",bp.intermediate_rows[i][j]);
-			}
-		}
-		usleep(20000);
-		system("clear");
+		printf("\n");
 	}
 }

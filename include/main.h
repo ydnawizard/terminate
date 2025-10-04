@@ -5,12 +5,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include "read_directory.h"
-#include "read_file.h"
-#include "concatenate.h"
-#include "animate.h"
-#include "banner.h"
-#include "fontify.h":
+#include "struct_banner.h"
+#include "struct_font.h"
+#include "text_concatenate.h"
+#include "font.h"
+#include "font_lookup.h"
+#include "intermediate_strip.h"
+#include "*_animate.h"
 
 
 #endif //MAIN_H

@@ -1,6 +1,8 @@
 #ifndef FONT_GRAFFITI_H
 #define FONT_GRAFFITI_H
 
+#include "struct_font.h"
+
 /**
  * Example:
  *       _____ ___________________  
@@ -120,5 +122,8 @@ extern unsigned char graffiti_<[72];
 
 extern unsigned char * graffiti_lookup[4];
 
+//create font struct
+
+extern font graffiti;
 
 #endif //FONT_GRAFFITI_H
