@@ -7,4 +7,6 @@
 
 void banner_init(banner * bp);
 
+void banner_free(banner * bp);
+
 #endif //INIT_BANNER_H

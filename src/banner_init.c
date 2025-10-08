@@ -6,3 +6,10 @@ void banner_init(banner * bp)
 	bp->columns = malloc(bp->selected_font.char_width * sizeof(unsigned char * ));
 	bp->output = malloc(strlen(bp->text) * bp->selected_font.char_len * sizeof(unsigned char));
 }
+
+void banner_free(banner * bp)
+{
+	free(bp->rows);
+	free(bp->columns);
+	free(bp->output);
+}
