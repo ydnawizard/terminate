@@ -20,9 +20,7 @@ void main(int arg_c,char * arg_v)
 	bp.text = "ABCABC";
 	bp.font_title = "graffiti";
 	font * fslt;
-	init_font_struct_lookup_table(&fslt);
-	font_title_lookup(&bp);
-	memcpy(&bp.selected_font,&fslt[bp.font_index],sizeof(font));
+	font_lookup_and_init(&bp,&fslt);
 	banner_init(&bp);
 	convert_text_to_font(&bp);
 	//printf("%s\n",graffiti_A);
@@ -34,6 +32,11 @@ void main(int arg_c,char * arg_v)
 			printf("%c",bp.intermediate[i][j]);
 		}
 		printf("\n");
+	}
+	concatenate(&bp);
+	for(int i = 0; i < strlen(bp.text) * bp.selected_font.char_width; i++)
+	{
+		printf("%s",bp.columns[i]);
 	}
 	banner_free(&bp);
 }

@@ -13,19 +13,20 @@ typedef struct banner
 	char * font_title;
 	//Font to use (index in font lookup)
 	int font_index;
+	//Font struct
 	font selected_font;
 	//Animation effect to be applied to text
 	char * effect;
 	//Tick speed of animation
 	int speed;
 	//Strings containing fontified letters
-	char ** intermediate;
+	unsigned char ** intermediate;
 	//Strings containing each row
-	char ** rows;
+	unsigned char ** rows;
 	//Strings containing each column
-	char ** columns;
+	unsigned char ** columns;
 	//String containing end product
-	char * output;
+	unsigned char * output;
 	
 }banner;
 

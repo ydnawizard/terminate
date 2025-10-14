@@ -5,11 +5,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#include "font_def_graffiti.h"
 #include "struct_banner.h"
 #include "struct_font.h"
 #include "banner_init.h"
 #include "intermediate_concatenate.h"
-#include "font.h"
+#include "font_convert.h"
 #include "font_lookup.h"
 #include "intermediate_strip.h"
 #include "all_animate.h"
