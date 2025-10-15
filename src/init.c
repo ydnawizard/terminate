@@ -1,4 +1,4 @@
-#include "banner_init.h"
+#include "init.h"
 
 void banner_init(banner * bp)
 {
@@ -13,6 +13,16 @@ void banner_init(banner * bp)
 		bp->columns[i] = malloc(bp->selected_font.char_height * sizeof(unsigned char));
 	}
 	bp->output = malloc(strlen(bp->text) * bp->selected_font.char_len * sizeof(unsigned char));
+	convert_text_to_font(bp);
+	strip_newlines(bp);
+	concatenate_intermediate_to_all(bp);
+}
+
+void font_init(banner * bp,font ** fslt)
+{
+	init_font_struct_lookup_table(fslt);
+	font_title_lookup(bp);
+	font_grab(bp,fslt);
 }
 
 void banner_free(banner * bp)

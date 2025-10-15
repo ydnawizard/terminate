@@ -1,5 +1,0 @@
-#ifndef COLUMNS_ANIMATE_H
-#define COLUMNS_ANIMATE_h
-
-
-#endif //COLUMNS_ANIMATE_H

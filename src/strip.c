@@ -1,4 +1,4 @@
-#include "intermediate_strip.h"
+#include "strip.h"
 
 void strip_newlines(banner * bp)
 {

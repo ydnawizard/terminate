@@ -14,29 +14,26 @@
 //Start: 9/12/25
 #include "main.h"
 
+//Init banner
+//init font struct lookup table
+//convert text to font
+//strip newlines
+//concatenate
 void main(int arg_c,char * arg_v)
 {
 	banner bp;
 	bp.text = "ABCABC";
 	bp.font_title = "graffiti";
 	font * fslt;
-	font_lookup_and_init(&bp,&fslt);
+	font_init(&bp,&fslt);
 	banner_init(&bp);
-	convert_text_to_font(&bp);
-	//printf("%s\n",graffiti_A);
-	strip_newlines(&bp);
-	for(int i = 0; i < strlen(bp.text); i++)
+	int loop = 1;
+	while(loop)
 	{
-		for(int j = 0; j < graffiti_char_len; j++)
-		{
-			printf("%c",bp.intermediate[i][j]);
-		}
-		printf("\n");
-	}
-	concatenate(&bp);
-	for(int i = 0; i < strlen(bp.text) * bp.selected_font.char_width; i++)
-	{
-		printf("%s",bp.columns[i]);
+		scroll_horizontal_left(&bp);
+		system("clear");
+		printf("%s",bp.output);
+		usleep(15000);
 	}
 	banner_free(&bp);
 }

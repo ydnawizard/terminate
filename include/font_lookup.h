@@ -14,8 +14,7 @@ void font_title_lookup(banner * bp);
 
 void font_lookup(banner * bp);
 
-void font_init(banner * bp,font ** fslt);
+void font_grab(banner * bp,font ** fslt);
 
-void font_lookup_and_init(banner * bp,font ** fslt);
 
 #endif //FONT_LOOKUP_H

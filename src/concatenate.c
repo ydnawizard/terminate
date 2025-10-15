@@ -1,7 +1,7 @@
-#include "intermediate_concatenate.h"
+#include "concatenate.h"
 
 
-void concatenate_to_rows(banner * bp)
+void concatenate_intermediate_to_rows(banner * bp)
 {
 	int row_len = strlen(bp->text) * bp->selected_font.char_width;
 	int intr_index,
@@ -26,13 +26,12 @@ void concatenate_to_rows(banner * bp)
 	}
 }
 
-void concatenate_to_columns(banner * bp)
+void concatenate_intermediate_to_columns(banner * bp)
 {
 	int intr_index = 0,
 	    intr_char_index = 0;
 	for(int column = 0; column < (strlen(bp->text) * bp->selected_font.char_width); column++)
 	{
-		printf("%s %d \n","column:",column);
 		if(column != 0 & (column % bp->selected_font.char_width) == 0)
 		{
 			intr_index += 1;
@@ -44,17 +43,13 @@ void concatenate_to_columns(banner * bp)
 		}
 		for(int char_index = 0; char_index < bp->selected_font.char_height; char_index++)
 		{
-			printf("%d ",intr_index);
-			printf("%d\n",intr_char_index);
-			printf("%s %d\n","index:",char_index);
 			bp->columns[column][char_index] = bp->intermediate[intr_index][intr_char_index];
-			printf("%s\n","made it");
 			intr_char_index += bp->selected_font.char_width;
 		}
 	}
 }
 
-void concatenate_to_output(banner * bp)
+void concatenate_intermediate_to_output(banner * bp)
 {
 	int k_start,
 	    output_index;
@@ -81,10 +76,23 @@ void concatenate_to_output(banner * bp)
 	}
 }
 
-void concatenate(banner * bp)
+void concatenate_intermediate_to_all(banner * bp)
 {
-	concatenate_to_rows(bp);
-	concatenate_to_columns(bp);
-	concatenate_to_output(bp);
+	concatenate_intermediate_to_rows(bp);
+	concatenate_intermediate_to_columns(bp);
+	concatenate_intermediate_to_output(bp);
+}
+
+void concatenate_rows_to_output(banner * bp)
+{
+	for(int i = 0; i < bp->selected_font.char_height; i++)
+	{
+		for(int j = i * (strlen(bp->text) * bp->selected_font.char_width);
+				j < ((i + 1) * (strlen(bp->text) * bp->selected_font.char_width));
+				j++)
+		{
+			bp->output[j] = bp->rows[i][j % (strlen(bp->text) * bp->selected_font.char_width)];
+		}
+	}
 }
 
