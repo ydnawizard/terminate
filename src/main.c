@@ -30,7 +30,7 @@ void main(int arg_c,char * arg_v)
 	int loop = 1;
 	while(loop)
 	{
-		scroll_horizontal_left(&bp);
+		scroll_horizontal_right(&bp);
 		system("clear");
 		printf("%s",bp.output);
 		usleep(15000);
